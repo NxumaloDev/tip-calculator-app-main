@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*::selection {
+    background: lightgray;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--Light-grayish-cyan);
+    font-family: 'Space Mono';
+    transition: all 250ms;
+}
+
+:root {
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --Strong-cyan: hsl(172, 67%, 45%);
+
+    --padding: 1rem;
+}
+
+.logo {
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.ctn {
+    padding: var(--padding);
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--White);
+    border-radius: 10px;
+    font-size: calc(var(--padding) / 2);
+    width: calc(var(--padding) * 15);
+    color: var(--Dark-grayish-cyan);
+}
+
+.coloc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: var(--padding) 0;
+}
+
+input,
+input:focus {
+    background: none;
+    border: none;
+    width: 5rem;
+    font-family: inherit;
+    color: var(--Very-dark-cyan);
+    text-align: end;
+    font-size: var(--padding);
+    outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.coloc p {
+    color: red;
+    display: none;
+}
+
+.calc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--Very-light-grayish-cyan);
+    border-radius: 5px;
+    height: calc(var(--padding) * 2.5);
+    padding: 0 var(--padding);
+}
+
+.calc:hover,
+.calc:focus-within {
+    outline: 1px solid var(--Strong-cyan);
+}
+
+.tip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--padding);
+    width: 100%;
+}
+
+button {
+    border-radius: 5px;
+    color: var(--White);
+    height: calc(var(--padding) * 2.5);
+    font-size: var(--padding);
+    background: var(--Very-dark-cyan);
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.custom {
+    cursor: pointer;
+    border-radius: 5px;
+    display: grid;
+    background: var(--Very-light-grayish-cyan);
+}
+
+.custom input {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+button:nth-of-type(3),
+.btn button {
+    background: var(--Strong-cyan);
+    color: black;
+}
+
+button:nth-of-type(3):hover,
+.btn button:hover {
+    background: hsl(172, 44%, 66%);
+}
+
+button:nth-of-type(6) {
+    background: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.custom:hover {
+    outline: 1px solid var(--Strong-cyan);
+    width: 100%;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.tip_ctn {
+    background: var(--Very-dark-cyan);
+    margin-block: var(--padding);
+    border-radius: 5px;
+    padding-block: calc(var(--padding) * 2) 0;
+}
+
+.calc_ {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: var(--padding);
+    line-height: 0.2;
+    font-size: calc(var(--padding) / 2);
+    color: var(--White);
+}
+
+.inline p {
+    color: var(--Grayish-cyan);
+}
+
+.total,
+.tip_a {
+    color: var(--Strong-cyan);
+    font-size: calc(var(--padding) * 2);
+}
+
+.btn {
+    display: grid;
+    padding: var(--padding);
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 375px) {
+    .ctn {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: calc(var(--padding) * 35);
+        gap: var(--padding);
+        top: 45%;
+    }
+
+    .tip_ctn {
+        height: calc(100% - 4rem);
+        position: relative;
+    }
+
+    .btn {
+        bottom: 0;
+        position: absolute;
+        width: calc(100% - 2rem);
+    }
+
+    .calc_ {
+        padding: 0 var(--padding);
+    }
+}

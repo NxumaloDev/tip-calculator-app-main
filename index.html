@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <img src="./images/logo.svg" class="logo">
+  <div class="ctn">
+    <div class="white">
+  <div class="bill">
+  <h2>Bill</h2>
+  <div class="calc">
+    <span><img src="./images/icon-dollar.svg"></span>
+    <input type="number" class="price" placeholder="0">
+  </div>
+</div>
+
+  <div class="tip_calc">
+  <h2>Select Tip %</h2>
+  <div class="tip">
+  <button class="five" onclick="five()">5%</button>
+  <button class="ten" onclick="ten()">10%</button>
+  <button class="fiveteen" onclick="fiveteen()">15%</button>
+  <button class="twentyfive" onclick="twentyfive()">25%</button>
+  <button class="fifty" onclick="fifty()">50%</button>
+  <div class="custom" onclick="custom()">
+  <input type="number" class="input" placeholder="Custom">
+</div>
+</div>
+  </div>
+  <div class="nop">
+    <div class="coloc">
+  <h2>Number of People</h2>
+  <p class="errorText">Can't be zero</p>
+</div>
+  <div class="calc" onclick="yooh()" id="calc">
+    <span><img src="./images/icon-person.svg"></span>
+    <input type="number" class="people" placeholder="0">
+  </div>
+</div>
+</div>
+<div class="notWhite">
+
+<div class="tip_ctn">
+  <div class="calc_">
+    <div class="inline">
+    <h2>Tip Amount</h2>
+    <p>/ person</p>
+  </div>
+  <p class="tip_a">$00.00</p>
+  </div>
+  
+  <div class="calc_">
+    <div class="inline">
+    <h2>Total</h2>
+    <p>/ person</p>
+  </div>
+  <p class="total">$00.00</p>
+  </div>
+  <div class="btn" onclick="reset">
+  <button>Reset</button>
+</div>
+</div>
+</div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
